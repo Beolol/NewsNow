@@ -14,10 +14,12 @@ protocol NewsInteractorProtocol: class {
 
 class NewsInteractor {
     weak var presenter: NewsPresenterProtocol?
+    weak var worker: NewsWorker?
     
-    init(presenter: NewsPresenterProtocol) {
+    init(presenter: NewsPresenterProtocol, worket: NewsWorker = NewsWorker()) {
         
         self.presenter = presenter
+        self.worker = worket
     }
 }
 

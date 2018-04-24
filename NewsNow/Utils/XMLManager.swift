@@ -8,9 +8,21 @@
 
 import Foundation
 
-class XMLParserManager {
+class XMLParserManager: NSObject {
     
     static var shared = XMLParserManager()
     
-    private init() { }
+    var xmlParser: XMLParser
+    
+    private override init() {
+        
+        xmlParser = XMLParser()
+        super.init()
+        
+        xmlParser.delegate = self
+    }
+}
+
+extension XMLParserManager: XMLParserDelegate {
+
 }
