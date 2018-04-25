@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		220BC4A5209118AA0072BE77 /* Data+Encoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220BC4A4209118AA0072BE77 /* Data+Encoding.swift */; };
 		220D450C208C8F2C00E1411B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220D450B208C8F2C00E1411B /* AppDelegate.swift */; };
 		220D4511208C8F2C00E1411B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 220D450F208C8F2C00E1411B /* Main.storyboard */; };
 		220D4513208C8F2D00E1411B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 220D4512208C8F2D00E1411B /* Assets.xcassets */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		220BC4A4209118AA0072BE77 /* Data+Encoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Encoding.swift"; sourceTree = "<group>"; };
 		220D4508208C8F2C00E1411B /* NewsNow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsNow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		220D450B208C8F2C00E1411B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		220D4510208C8F2C00E1411B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				22781CDC208E753E007823F9 /* XMLManager.swift */,
+				220BC4A4209118AA0072BE77 /* Data+Encoding.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 				22806FB5208FB97C00FE4AB3 /* NewsAPIStore.swift in Sources */,
 				22806FB1208FB72000FE4AB3 /* NewsAPI.swift in Sources */,
 				22788006208CC5A200B7731E /* NewsTableViewCell.swift in Sources */,
+				220BC4A5209118AA0072BE77 /* Data+Encoding.swift in Sources */,
 				228C3762208C9C1700B7A1D0 /* NewsPresenter.swift in Sources */,
 				220D450C208C8F2C00E1411B /* AppDelegate.swift in Sources */,
 				228C3766208C9C5000B7A1D0 /* NewsConfigurator.swift in Sources */,

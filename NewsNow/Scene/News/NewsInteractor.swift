@@ -9,20 +9,31 @@
 import Foundation
 
 protocol NewsInteractorProtocol: class {
-    
+    func getNews()
 }
 
 class NewsInteractor {
-    weak var presenter: NewsPresenterProtocol?
-    weak var worker: NewsWorker?
+    let presenter: NewsPresenterProtocol
+    let worker: NewsWorker
     
     init(presenter: NewsPresenterProtocol, worket: NewsWorker = NewsWorker()) {
         
         self.presenter = presenter
-        self.worker = worket
+        self.worker = NewsWorker()
     }
 }
 
 extension NewsInteractor: NewsInteractorProtocol {
-    
+    func getNews() {
+        worker.fetchNews(completion: { news, error  in
+            
+            if let n = news {
+                
+            }
+            if let e = error {
+                
+            }
+            
+        })
+    }
 }

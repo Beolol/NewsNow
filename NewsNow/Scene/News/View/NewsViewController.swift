@@ -49,6 +49,8 @@ class NewsViewController: UIViewController {
 
         let cellNib = UINib(nibName: "NewsTableViewCell", bundle: nil)
         tableView.register(cellNib, forCellReuseIdentifier: "NewsCell")
+        
+        interactor?.getNews()
     }
 
     override func didReceiveMemoryWarning() {

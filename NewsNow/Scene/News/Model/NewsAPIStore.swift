@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+import SWXMLHash
 
 enum NewsStoreError: Error {
     
@@ -17,7 +17,7 @@ enum NewsStoreError: Error {
 }
 
 protocol NewsStoreProtocol {
-    
+    func fetchNews(completion: @escaping ([String]?, Error?) -> ())
 }
 
 
@@ -27,6 +27,8 @@ final class NewsAPIStore {
         static let lentaRU = "https://lenta.ru/rss/news"
     }
     
+    
+    
     // MARK: - Initializers
     init() {
         
@@ -34,5 +36,10 @@ final class NewsAPIStore {
 }
 
 extension NewsAPIStore: NewsStoreProtocol {
-
+    func fetchNews(completion: @escaping ([String]?, Error?) -> ()) {
+        print("test")
+        XMLParserManager.shared.getNews(by: Constants.lentaRU) { /*[weak self]*/ result in
+            print(result)
+        }
+    }
 }
