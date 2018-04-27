@@ -10,10 +10,10 @@ import UIKit
 
 protocol NewsDisplayLogic: class
 {
-    
+    func displayError(viewModel: ErrorViewModel)
 }
 
-class NewsViewController: UIViewController {
+class NewsViewController: UIViewController, ErrorPresenter {
 
     var router: NewsRouterProtocol?
     var interactor: NewsInteractorProtocol?
@@ -61,7 +61,10 @@ class NewsViewController: UIViewController {
 }
 
 extension NewsViewController: NewsDisplayLogic {
-    
+    func displayError(viewModel: ErrorViewModel) {
+        
+        presentError(viewModel: viewModel)
+    }
 }
 
 extension NewsViewController: UITableViewDelegate, UITableViewDataSource {

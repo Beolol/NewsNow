@@ -9,7 +9,9 @@
 import Foundation
 
 protocol NewsPresenterProtocol: class {
+    func presentNews(news: [NewsModel])
     
+    func presentError(error: Error)
 }
 
 class NewsPresenter {
@@ -22,5 +24,16 @@ class NewsPresenter {
 }
 
 extension NewsPresenter: NewsPresenterProtocol {
+    func presentError(error: Error) {
+        let errorViewModel = ErrorViewModel(title: Strings.Error.genericTitle,
+                                            message: Strings.Error.genericMessage,
+                                            buttonTitles: [Strings.Error.okButtonTitle])
+        
+        vc?.displayError(viewModel: errorViewModel)
+    }
+    
+    func presentNews(news: [NewsModel]) {
+        print(news)
+    }
     
 }

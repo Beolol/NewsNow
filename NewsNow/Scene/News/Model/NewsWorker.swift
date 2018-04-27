@@ -22,7 +22,7 @@ class NewsWorker {
     
     // MARK: - Business Logic
     
-    func fetchNews(completion: @escaping ([String]?, Error?) -> ()) {
+    func fetchNews(completion: @escaping ([NewsModel]?, Error?) -> ()) {
         
         store.fetchNews(completion: completion)
     }

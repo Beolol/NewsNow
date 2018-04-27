@@ -24,6 +24,10 @@
 		228C3762208C9C1700B7A1D0 /* NewsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228C3761208C9C1700B7A1D0 /* NewsPresenter.swift */; };
 		228C3764208C9C4200B7A1D0 /* NewsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228C3763208C9C4200B7A1D0 /* NewsRouter.swift */; };
 		228C3766208C9C5000B7A1D0 /* NewsConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228C3765208C9C5000B7A1D0 /* NewsConfigurator.swift */; };
+		22D6133B2093B99800247AF0 /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D6133A2093B99800247AF0 /* NewsModel.swift */; };
+		22D6133E2093BF6A00247AF0 /* ErrorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D6133D2093BF6A00247AF0 /* ErrorViewModel.swift */; };
+		22D613402093BF9D00247AF0 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D6133F2093BF9D00247AF0 /* Strings.swift */; };
+		22D613422093C02E00247AF0 /* ErrorPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D613412093C02E00247AF0 /* ErrorPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +50,10 @@
 		228C3761208C9C1700B7A1D0 /* NewsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsPresenter.swift; sourceTree = "<group>"; };
 		228C3763208C9C4200B7A1D0 /* NewsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsRouter.swift; sourceTree = "<group>"; };
 		228C3765208C9C5000B7A1D0 /* NewsConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsConfigurator.swift; sourceTree = "<group>"; };
+		22D6133A2093B99800247AF0 /* NewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsModel.swift; sourceTree = "<group>"; };
+		22D6133D2093BF6A00247AF0 /* ErrorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewModel.swift; sourceTree = "<group>"; };
+		22D6133F2093BF9D00247AF0 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		22D613412093C02E00247AF0 /* ErrorPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +88,7 @@
 		220D450A208C8F2C00E1411B /* NewsNow */ = {
 			isa = PBXGroup;
 			children = (
+				22D6133C2093BF5400247AF0 /* Shared */,
 				220D450B208C8F2C00E1411B /* AppDelegate.swift */,
 				22BCD136208E7A3300ACA41E /* Utils */,
 				22806FAF208FB6E000FE4AB3 /* Services */,
@@ -152,6 +161,7 @@
 			children = (
 				22806FB2208FB96D00FE4AB3 /* NewsWorker.swift */,
 				22806FB4208FB97C00FE4AB3 /* NewsAPIStore.swift */,
+				22D6133A2093B99800247AF0 /* NewsModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -171,6 +181,16 @@
 				220BC4A4209118AA0072BE77 /* Data+Encoding.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		22D6133C2093BF5400247AF0 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				22D6133D2093BF6A00247AF0 /* ErrorViewModel.swift */,
+				22D6133F2093BF9D00247AF0 /* Strings.swift */,
+				22D613412093C02E00247AF0 /* ErrorPresenter.swift */,
+			);
+			path = Shared;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,9 +288,13 @@
 				22806FB3208FB96D00FE4AB3 /* NewsWorker.swift in Sources */,
 				22806FB5208FB97C00FE4AB3 /* NewsAPIStore.swift in Sources */,
 				22806FB1208FB72000FE4AB3 /* NewsAPI.swift in Sources */,
+				22D6133B2093B99800247AF0 /* NewsModel.swift in Sources */,
 				22788006208CC5A200B7731E /* NewsTableViewCell.swift in Sources */,
+				22D613402093BF9D00247AF0 /* Strings.swift in Sources */,
 				220BC4A5209118AA0072BE77 /* Data+Encoding.swift in Sources */,
 				228C3762208C9C1700B7A1D0 /* NewsPresenter.swift in Sources */,
+				22D6133E2093BF6A00247AF0 /* ErrorViewModel.swift in Sources */,
+				22D613422093C02E00247AF0 /* ErrorPresenter.swift in Sources */,
 				220D450C208C8F2C00E1411B /* AppDelegate.swift in Sources */,
 				228C3766208C9C5000B7A1D0 /* NewsConfigurator.swift in Sources */,
 				228C3760208C9BF700B7A1D0 /* NewsInteractor.swift in Sources */,

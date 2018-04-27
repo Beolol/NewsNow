@@ -17,7 +17,7 @@ enum NewsStoreError: Error {
 }
 
 protocol NewsStoreProtocol {
-    func fetchNews(completion: @escaping ([String]?, Error?) -> ())
+    func fetchNews(completion: @escaping ([NewsModel]?, Error?) -> ())
 }
 
 
@@ -36,10 +36,10 @@ final class NewsAPIStore {
 }
 
 extension NewsAPIStore: NewsStoreProtocol {
-    func fetchNews(completion: @escaping ([String]?, Error?) -> ()) {
-        print("test")
+    func fetchNews(completion: @escaping ([NewsModel]?, Error?) -> ()) {
+        
         XMLParserManager.shared.getNews(by: Constants.lentaRU) { /*[weak self]*/ result in
-            print(result)
+            completion(result, nil)
         }
     }
 }

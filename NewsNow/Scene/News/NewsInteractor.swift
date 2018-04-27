@@ -16,6 +16,8 @@ class NewsInteractor {
     let presenter: NewsPresenterProtocol
     let worker: NewsWorker
     
+    var news: [NewsModel]?
+    
     init(presenter: NewsPresenterProtocol, worket: NewsWorker = NewsWorker()) {
         
         self.presenter = presenter
@@ -25,15 +27,20 @@ class NewsInteractor {
 
 extension NewsInteractor: NewsInteractorProtocol {
     func getNews() {
-        worker.fetchNews(completion: { news, error  in
+        worker.fetchNews(completion: { [weak self] news, error  in
             
-            if let n = news {
+            if let strongSelf = self {
                 
+                if let err = error {
+                    
+                    strongSelf.presenter.presentError(error: err)
+                    
+                } else if let newsArray = news {
+                    
+                    strongSelf.news = newsArray
+                    strongSelf.presenter.presentNews(news: newsArray)
+                }
             }
-            if let e = error {
-                
-            }
-            
         })
     }
 }

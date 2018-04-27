@@ -25,7 +25,7 @@ class XMLParserManager: NSObject {
     
     static var currentLink = ""
     
-    var xmlData: [[String : String]]?
+    var xmlData: [NewsModel]?
     var xmlItem: [String : String]?
     var xmlElement: String?
     
@@ -34,7 +34,7 @@ class XMLParserManager: NSObject {
     }
     
     
-    func getNews(by urlString: String, completeHandler: @escaping ([[String : String]]) -> Void ) {
+    func getNews(by urlString: String, completeHandler: @escaping ([NewsModel]) -> Void ) {
         XMLParserManager.currentLink = urlString
         
         DispatchQueue.global(qos: .background).async { [weak self] in
@@ -94,7 +94,7 @@ extension XMLParserManager: XMLParserDelegate {
     func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String] = [:]) {
         
         if elementName == "rss" {
-            xmlData = [[String : String]]()
+            xmlData = [NewsModel]()
         }
         
         if elementName == "enclosure" {
@@ -151,7 +151,8 @@ extension XMLParserManager: XMLParserDelegate {
 
         if elementName == XMLConstants.item {
             if let item = xmlItem {
-                xmlData?.append(item)
+                let news = NewsModel(xmlItem: item)
+                xmlData?.append(news)
             }
         }
         
